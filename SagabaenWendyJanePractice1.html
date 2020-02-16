@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagabaen, Wendy Jane_Form-Validation</title>
+    <script src="form-validation.js">
+    </script>
+    <style>
+        label{
+            margin-bottom:10px;
+            display:block;
+        }
+        td{
+            padding: 7px;
+            width:100px;
+        }
+        td+td{
+            width:auto;
+        }
+        td+td+td{
+            width:70px;;
+        }
+        table{
+            width: 50%;
+            border: 1px solid black;
+            margin-top: 5%;
+            padding:10px;
+        }
+
+    </style>
+
+</head>
+<body onload="process()">
+    <form>
+        <table id="table" align="center">
+            <tbody>
+            <tr class="new_row">
+                <td class="first_col"> 
+                    <label>
+                        Event type:
+                    </label>
+                </td>
+                <td colspan="2">
+                    <select id="selectEventType">
+                        <option disabled selected value> -- select -- </option>
+                        <option value="Party"> Party </option>
+                        <option value="Wedding"> Wedding </option>
+                        <option value="Graduation"> Graduation </option>
+                        <option value="Debut"> Debut </option>
+                        <option value="Birthday Party"> Birthday Party </option>
+                        <option value="Others"> Others </option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="new_row">
+                <td class="first_col">
+                    <label>
+                        Event Title: 
+                    </label>
+                </td>
+                <td colspan="2">
+                        <input id="eventTitle" type="text" size="50"><br>
+                </td>
+            </tr>
+            <tr class="new_row">
+                <td class="first_col">
+                    <label>
+                        Event Dates: 
+                    </label>
+                </td>
+                <td colspan="2">                        
+                    <input id="startDate" type="date" min="0000-00-00"placeholder="dd/mm/yyyy" > to <input id="endDate" type="date" min="0000-00-00" placeholder="dd/mm/yyyy"><br>
+                </td>
+            </tr>
+            <tr class="new_row">
+                <td class="first_col">
+                    <label>
+                        Posting Dates: 
+                    </label>
+                </td>
+                <td colspan="2">                    
+                    <input id="postingDate" type="date"><br>
+                </td>
+            </tr>
+            <tr class="new_row">
+                <td colspan="3">
+                    <label>
+                        <input type="checkbox" id="registrationCheck" name="registrationCheck"/>
+                        Is Registration Required?
+                    </label>
+                </td>
+            </tr>
+            <tr class="new_row">
+                <td colspan="3">
+                    <label>
+                        <input type="checkbox" id="famProgCheck" name="famProgCheck"/>
+                        Is this event associated with any Family Programs?
+                    </label>
+                </td>
+            </tr>
+            <tr class="new_row">
+                <td colspan="3">
+                    <label>
+                        <input type="checkbox" id="emailCheck" name="emailCheck"/>
+                        Upon registration completion, Are users to receive an auto generated email?
+                    </label>
+                </td>
+            </tr>
+            <tr class="new_row">
+                <td colspan="3">
+                    <label>            
+                        <input type="checkbox" id="pointContactCheck" name="pointContactCheck"/>
+                        Is there a point of Contact?
+                    </label>
+                </td>
+            </tr>
+            <tr class="new_row">
+                <td colspan="3">
+                    <label>        
+                        <input type="checkbox" id="hostCommandCheck" name="hostCommandCheck"/>
+                        Is there a hosting command point of contact?
+                    </label>
+                </td>
+            </tr>
+            <tr class="new_row">
+                <td></td>
+                    <td align="right">
+                        <label>            
+                            <input type="submit" value="send to server"onclick="validateData()">
+                    </td>
+                     <td>
+                        <label>
+                            <input type="reset" value="cancel">
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</form>
+</p>
+</body>
+</html>
